@@ -61,6 +61,17 @@ $(".saveBtn").on("click", function() {
 });
 
 //load local storage on page load
+// probably could have done this more efficiently, but.... lazy
 var loadLocalStorage = function () {
-    
+    $("#Hr-9txt").val(localStorage.getItem("Hr-9"));
+    $("#Hr-10txt").val(localStorage.getItem("Hr-10"));
+    $("#Hr-11txt").val(localStorage.getItem("Hr-11"));
+    $("#Hr-12txt").val(localStorage.getItem("Hr-12"));
+    $("#Hr-13txt").val(localStorage.getItem("Hr-13"));
+    $("#Hr-14txt").val(localStorage.getItem("Hr-14"));
+    $("#Hr-15txt").val(localStorage.getItem("Hr-15"));
+    $("#Hr-16txt").val(localStorage.getItem("Hr-16"));
+    $("#Hr-17txt").val(localStorage.getItem("Hr-17"));
 };
+
+loadLocalStorage();
