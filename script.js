@@ -48,4 +48,19 @@ setInterval(function() {
 colorCode();
 
 
-   
+// add general eventlistener to savebuttons and save the related text
+$(".saveBtn").on("click", function() {
+    // get textInput from sibling element
+    var textInput = $(this).siblings(".description").val().trim();
+
+    // get blockID from the button ID
+    var blockID = $(this).attr("id").replace("btn","");
+
+    // save string from text input into local storage
+    localStorage.setItem(blockID, textInput);
+});
+
+//load local storage on page load
+var loadLocalStorage = function () {
+    
+};
