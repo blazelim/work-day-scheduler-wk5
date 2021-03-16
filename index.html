@@ -26,11 +26,94 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <!--TODO add moment connection-->
+      <!-- add moment connection to display current date-->
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+      <!-- Making 9 rows for 9am to 5pm blocks, each column are divided as 1/10/1 for save icon -->
+
+      <!-- 9am -->
+      <div class="row time-block" id="Hr-9">
+        <div class="hour col-1">9AM</div>
+        <textarea class="description col-10 past" id="Hr-9txt"></textarea>
+        <button class="saveBtn col-1" id="Hr-9btn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+
+      <!-- 10am -->
+      <div class="row time-block" id="Hr-10">
+        <div class="hour col-1">10AM</div>
+        <textarea class="description col-10 past" id="Hr-10txt"></textarea>
+        <button class="saveBtn col-1" id="Hr-10btn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+
+      <!-- 11am -->
+      <div class="row time-block" id="Hr-11">
+        <div class="hour col-1">11AM</div>
+        <textarea class="description col-10 past" id="Hr-11txt"></textarea>
+        <button class="saveBtn col-1" id="Hr-11btn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+
+      <!-- 12pm (noon) -->
+      <div class="row time-block" id="Hr-12">
+        <div class="hour col-1">12PM</div>
+        <textarea class="description col-10 past" id="Hr-12txt"></textarea>
+        <button class="saveBtn col-1" id="Hr-12btn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+
+      <!-- 1pm -->
+      <div class="row time-block" id="Hr-13">
+        <div class="hour col-1">1PM</div>
+        <textarea class="description col-10 past" id="Hr-13txt"></textarea>
+        <button class="saveBtn col-1" id="Hr-13btn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+
+      <!-- 2pm -->
+      <div class="row time-block" id="Hr-14">
+        <div class="hour col-1">2PM</div>
+        <textarea class="description col-10 past" id="Hr-14txt"></textarea>
+        <button class="saveBtn col-1" id="Hr-14btn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+
+      <!-- 3pm -->
+      <div class="row time-block" id="Hr-15">
+        <div class="hour col-1">3PM</div>
+        <textarea class="description col-10 past" id="Hr-15txt"></textarea>
+        <button class="saveBtn col-1" id="Hr-15btn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+
+      <!-- 4pm -->
+      <div class="row time-block" id="Hr-16">
+        <div class="hour col-1">4PM</div>
+        <textarea class="description col-10 past" id="Hr-16txt"></textarea>
+        <button class="saveBtn col-1" id="Hr-16btn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+
+      <!-- 5pm -->
+      <div class="row time-block" id="Hr-17">
+        <div class="hour col-1">5PM</div>
+        <textarea class="description col-10 past" id="Hr-17txt"></textarea>
+        <button class="saveBtn col-1" id="Hr-17btn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
