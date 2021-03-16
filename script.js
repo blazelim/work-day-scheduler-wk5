@@ -20,8 +20,6 @@ var colorCode = function () {
 
         // make blockHour a number for comparison sake for if, if else, else statements
         blockHour = parseInt(blockHour);
-        console.log(typeof blockHour)
-        console.log(blockHour);
 
         //if currentHour is greater than the block time, the block time is in the past, set child(description) class to past
         if (currentHour > blockHour) {
@@ -63,15 +61,33 @@ $(".saveBtn").on("click", function() {
 //load local storage on page load
 // probably could have done this more efficiently, but.... lazy
 var loadLocalStorage = function () {
-    $("#Hr-9txt").val(localStorage.getItem("Hr-9"));
-    $("#Hr-10txt").val(localStorage.getItem("Hr-10"));
-    $("#Hr-11txt").val(localStorage.getItem("Hr-11"));
-    $("#Hr-12txt").val(localStorage.getItem("Hr-12"));
-    $("#Hr-13txt").val(localStorage.getItem("Hr-13"));
-    $("#Hr-14txt").val(localStorage.getItem("Hr-14"));
-    $("#Hr-15txt").val(localStorage.getItem("Hr-15"));
-    $("#Hr-16txt").val(localStorage.getItem("Hr-16"));
-    $("#Hr-17txt").val(localStorage.getItem("Hr-17"));
+    // $("#Hr-9txt").val(localStorage.getItem("Hr-9"));
+    // $("#Hr-10txt").val(localStorage.getItem("Hr-10"));
+    // $("#Hr-11txt").val(localStorage.getItem("Hr-11"));
+    // $("#Hr-12txt").val(localStorage.getItem("Hr-12"));
+    // $("#Hr-13txt").val(localStorage.getItem("Hr-13"));
+    // $("#Hr-14txt").val(localStorage.getItem("Hr-14"));
+    // $("#Hr-15txt").val(localStorage.getItem("Hr-15"));
+    // $("#Hr-16txt").val(localStorage.getItem("Hr-16"));
+    // $("#Hr-17txt").val(localStorage.getItem("Hr-17"));
+
+    // Do not repeat thyself renders the above pretty bad for scaling purposes
+    
+    $(".time-block").each(function() {
+        // obtain timeblock id
+        var blockID = $(this).attr("id");
+
+        console.log
+        // textbox ID is timeblock id with txt at the end
+        var textboxID = blockID.concat("txt");
+
+        //get textbox value which is set by timeblock ID
+        var textboxValue = localStorage.getItem(blockID);
+
+        //set textbox value to the localstorage value, add # to reference ID
+        $("#" + textboxID).val(textboxValue);
+    });
 };
 
+//apply once on load
 loadLocalStorage();
